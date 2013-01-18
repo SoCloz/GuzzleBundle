@@ -23,7 +23,11 @@ class DdeboerGuzzleExtension extends Extension
         $configuration = new Configuration($container->getParameter('kernel.debug'));
         $config = $processor->processConfiguration($configuration, $configs);
 
-        $container->setParameter('guzzle.service_builder.configuration_file',
+        $container->setParameter('guzzle.service_builder.configuration',
+            $config['service_builder']['configuration']);
+
+        if (empty($config['service_builder']['configuration'])) {
+            $container->setParameter('guzzle.service_builder.configuration',
                 $config['service_builder']['configuration_file']);
 
         if ($config['logging']) {
