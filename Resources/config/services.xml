@@ -8,7 +8,9 @@
         <parameter key="guzzle.service_builder.class">Guzzle\Service\Builder\ServiceBuilder</parameter>
         <parameter key="guzzle.service_builder_factory.class">Guzzle\Service\Builder\ServiceBuilder</parameter>
 
+<!--
         <parameter key="guzzle.plugin.service_builder.class">Guzzle\Service\Plugin\PluginCollectionPlugin</parameter>
+-->
         <parameter key="guzzle.plugin.data_collector.class">Ddeboer\GuzzleBundle\Guzzle\Http\Plugin\DataCollectorPlugin</parameter>
         <parameter key="guzzle.plugin.log.class">Guzzle\Http\Plugin\LogPlugin</parameter>
         <parameter key="guzzle.plugin.log.monolog.adapter.class">Guzzle\Log\MonologLogAdapter</parameter>
