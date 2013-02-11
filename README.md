@@ -59,6 +59,9 @@ class MyWebserviceClient extends Client
     public static function factory($config = array())
     {
         $client = new self($config['base_url'], $config);
+
+        // Add custom setup code
+
         // Attach a service description to the client
         $description = ServiceDescription::factory($config);
         $client->setDescription($description);
@@ -68,7 +71,8 @@ class MyWebserviceClient extends Client
 }
 ```
 
-To define your 
+And configure the webservice :
+
 ``` yaml
 # app/config/config.yml
 ddeboer_guzzle:
